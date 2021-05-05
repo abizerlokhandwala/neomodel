@@ -182,7 +182,7 @@ class Database(local, NodeClassRegistry):
         
         
     @ensure_connection
-    def cypher_query(self, query, params=None, handle_unique=True, retry_on_session_expire=False, resolve_objects=False):
+    def cypher_query(self, query, params=None, handle_unique=True, retry_on_session_expire=True, resolve_objects=False):
         """
         Runs a query on the database and returns a list of results and their headers.
         
